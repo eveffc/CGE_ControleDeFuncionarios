@@ -1,0 +1,7 @@
+docker-compose.override.yml
+.env
+
+node_modules/
+vendor/
+.cache/
+logs/
