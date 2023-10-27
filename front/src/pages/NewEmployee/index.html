@@ -11,16 +11,20 @@
     <body>
         <header></header>
         <form>
+            <h1>Novo Colaborador</h1>
             <div class="name">
-                <label>Nome</label>
-                <input type="text" required>
-                <labe>Sobrenome</labe>
-                <input type="text"  required>
+                <div class="title">
+                    <label>Nome</label>
+                    <input type="text" required>
+                </div>
+                <div class="title">
+                    <label>Sobrenome</label>
+                    <input type="text"  required>
+                </div>
             </div>
-            <label>cargo</label>
             <div class="function">
+                <label>cargo</label>
                 <select value="cargo" id="meuSelect" required>
-
                     <script>
                         var select = document.getElementById("meuSelect");
                         var dados = ["Opção 1", "Opção 2", "Opção 3"];
@@ -32,16 +36,23 @@
                           select.appendChild(option);
                         }
                       </script>
-                      
                 </select>
+
             </div>
             <div class="info">
-                <label>Salário</label>
-                <input type="number" required>
-                <label>Data da promoção</label>
-                <input type="date" required></input>
+                <div class="title">
+                    <label>Salário</label>
+                    <input type="number" required>
+                </div>
+                <div class="title">
+                    <label>Data da promoção</label>
+                    <input type="date" required></input>
+                </div>
             </div>
-            <button class="button" type="submit">Salvar</button>
+            <div class="actions">
+                <button class="button" type="submit">Salvar</button>
+                <a href="../../..">cancelar</a>
+            </div>
         </form>
     </body>
 </html>
