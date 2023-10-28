@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title></title>
-        <link rel="stylesheet" href="../../../css/app.css">
-        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="/css/app.css">
+        <link rel="stylesheet" href="/css/newemployee.css">
 
     </head>
     <body>
@@ -46,12 +46,12 @@
                 </div>
                 <div class="title">
                     <label>Data da promoção</label>
-                    <input type="date" required></input>
+                    <input type="date" required input>
                 </div>
             </div>
             <div class="actions">
                 <button class="button" type="submit">Salvar</button>
-                <a href="../../welcome.blade.php">cancelar</a>
+                <a href="/">cancelar</a>
             </div>
         </form>
     </body>

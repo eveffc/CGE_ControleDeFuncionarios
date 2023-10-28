@@ -4,24 +4,13 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title></title>
-        <link rel="stylesheet" href="../../../css/app.css">
-        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="/css/app.css">
+        <link rel="stylesheet" href="/css/promotion.css">
 
     </head>
     <body>
         <header></header>
         <form>
-            <h1>Novo Colaborador</h1>
-            <div class="name">
-                <div class="title">
-                    <label>Nome</label>
-                    <input type="text" required>
-                </div>
-                <div class="title">
-                    <label>Sobrenome</label>
-                    <input type="text"  required>
-                </div>
-            </div>
             <div class="function">
                 <label>cargo</label>
                 <select value="cargo" id="meuSelect" required>
@@ -50,7 +39,7 @@
                 </div>
             </div>
             <div class="actions">
-                <button class="button" type="submit">Salvar</button>
+                <button class="button" type="submit">Salvar</button> <!--Logica para adicionar mais funções aquele id-->
                 <a href="../../..">cancelar</a>
             </div>
         </form>

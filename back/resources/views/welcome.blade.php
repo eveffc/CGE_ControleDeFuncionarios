@@ -5,16 +5,18 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Controle de Funcionarios - CGE</title>
-        <link rel="stylesheet" href="../css/app.css">
+        <link rel="stylesheet" href="/css/app.css">
 
     </head>
     <body>
         <header></header>
             <div class="LButton">
-                <a class="link" href="./pages/NewEmployee/index.php">Novo Cadastro</a>
+                <a class="link" href="/novo_funcionario">Novo Cadastro</a>
             </div>
         <table>
-            
+            @foreach($funcionarios as $funcionario)
+            <p> {{$funcionario ->nome}} <p>
+            @endforeach
         </table>
 
     </body>

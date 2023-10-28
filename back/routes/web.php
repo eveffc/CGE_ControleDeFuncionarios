@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +17,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/novo_funcionario', function () {
+    return view('new');
+});
+Route::get('/editar_funcionario', function () {
+    return view('EditEmployee');
+});
+Route::get('/promocao', function () {
+    return view('Promotion');
+});
+Route::get('/funcionario', function () {
+    return view('ShowEmployee');
+});
+
+
