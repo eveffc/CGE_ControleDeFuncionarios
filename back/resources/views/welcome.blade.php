@@ -10,14 +10,18 @@
     </head>
     <body>
         <header></header>
-            <div class="LButton">
-                <a class="link" href="/novo_funcionario">Novo Cadastro</a>
-            </div>
+        <div class="LButton">
+            <a class="link" href="/novo.funcionario">Novo Cadastro</a>
+        </div>
         <table>
-            @foreach($funcionarios as $funcionario)
-            <p> {{$funcionario ->nome}} <p>
-            @endforeach
+            <tr>
+                @foreach ($employees as $employee)
+                <td>
+                    <p>{{$employee -> nome}}</p>
+                    <p>{{$employee -> cargo}}</p>
+                </td>
+                @endforeach
+            <tr>
         </table>
-
     </body>
 </html>

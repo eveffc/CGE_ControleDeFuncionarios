@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateHistoricEmployeeTable extends Migration
+class CreateEmployees extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,10 @@ class CreateHistoricEmployeeTable extends Migration
      */
     public function up()
     {
-        Schema::create('historic_employee', function (Blueprint $table) {
+        Schema::create('employees', function (Blueprint $table) {
             $table->id();
-
-            $table->unsignedBigInteger('employee_id'); //id do usuário 
-            $table->foreign('employee_id')
-            ->references('id')
-            ->on('employees')
-            ->onDelete('cascade');
-
+            $table->string('nome');
+            $table->integer('matricula');
             $table->string('cargo');
             $table->integer('salario');
             $table->date('data_promocao');
@@ -36,6 +31,6 @@ class CreateHistoricEmployeeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('historic_employee');
+        Schema::dropIfExists('employees');
     }
 }

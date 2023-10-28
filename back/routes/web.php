@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\StorieController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,20 +15,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/novo_funcionario', function () {
+
+Route::get('/', [EmployeeController::class, 'index']);
+
+Route::get('/novo.funcionario', function () {
     return view('new');
 });
-Route::get('/editar_funcionario', function () {
+Route::get('/editar.funcionario', function () {
     return view('EditEmployee');
 });
 Route::get('/promocao', function () {
     return view('Promotion');
 });
-Route::get('/funcionario', function () {
-    return view('ShowEmployee');
-});
+Route::get('/funcionario', [StorieController::class, 'index']);
+
+
 
 

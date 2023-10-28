@@ -10,7 +10,7 @@
     </head>
     <body>
         <header></header>
-        <form>
+        <form action="{{url('/promocao')}}" method="GET">
             <div class="function">
                 <label>cargo</label>
                 <select value="cargo" id="meuSelect" required>

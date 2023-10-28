@@ -11,26 +11,21 @@
     <body>
         <header></header>
             <div class="LButton">
-                <a class="link" href="../Promotion/">Nova promoção</a>
+                <a class="link" href="/Promocao">Nova promoção</a>
             </div>
             <div class="container">
-            <h1>Nome do colaborador</h1>
+            {{-- @foreach ($employees as $employee)
+                <h1>{{$employee -> nome}}</h1>
+            @endforeach --}}
             <table>
                 <tr>
+                    @foreach ($stories as $storie)
                     <td>
-                        esse é um texto de teste
+                        <p>{{$storie -> cargo}}</p>
+                        <p>{{$storie -> data_promocao}}</p>
+                        <p>{{$storie -> salario}}</p>
                     </td>
-                </tr>
-                
-                <tr>
-                    <td>
-                        esse é um texto de teste
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        esse é um texto de teste
-                    </td>
+                    @endforeach
                 </tr>
             </table>
         </div>
