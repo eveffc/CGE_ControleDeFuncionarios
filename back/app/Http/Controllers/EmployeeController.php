@@ -12,11 +12,11 @@ class EmployeeController extends Controller
         return view('welcome', ['employees' => $employees]);
     }
 
-    public function create(){
-        return view('employees.create');
-    }
+    // public function create(){
+    //     return view('employees.create');
+    // }
 
-    public function inserirDados(Request $request)
+    public function create(Request $request)
     {
     // Valide os dados do formulário, por exemplo:
     $validatedData = $request->validate([

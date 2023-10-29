@@ -23,7 +23,7 @@ Route::get('/', [EmployeeController::class, 'index']);
 Route::get('/novo.funcionario', function () {
     return view('newEmployee');
 });
-Route::post('/inserir.employee', [EmployeeController::class, 'inserirDados']);
+Route::post('/inserir.employee', [EmployeeController::class, 'create']);
 
 //editar funcionário
 Route::get('/editar.funcionario', function () {

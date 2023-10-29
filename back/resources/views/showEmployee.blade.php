@@ -11,7 +11,7 @@
     <body>
         <header></header>
             <div class="LButton">
-                <a class="link" href="/Promocao">Nova promoção</a>
+                <a class="link" href="/promocao">Nova promoção</a>
             </div>
             <div class="container">
             {{-- @foreach ($employees as $employee)

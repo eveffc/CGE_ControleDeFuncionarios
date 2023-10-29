@@ -14,14 +14,21 @@
             <a class="link" href="/novo.funcionario">Novo Cadastro</a>
         </div>
         <table>
-            <tr>
+
                 @foreach ($employees as $employee)
                 <td>
-                    <p>{{$employee -> nome}}</p>
-                    <p>{{$employee -> cargo}}</p>
+                    <a href="/funcionario">
+                        <p class="nome">{{$employee -> nome}}</p>
+                        <p class="cargo">{{$employee -> cargo}}</p>
+                    </a>
+    
+                    <button type="submit" type="submit">Excluir</button>
+                     <button type="submit" type="submit">Editar</button>
+                    <a class="promove" href="/promocao" type="submit">Promover</a>
+                   
                 </td>
                 @endforeach
-            <tr>
+
         </table>
     </body>
 </html>
