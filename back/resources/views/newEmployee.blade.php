@@ -10,21 +10,23 @@
     </head>
     <body>
         <header></header>
-        <form>
+        <form action="/inserir.employee" method="POST">
+            @csrf
             <h1>Novo Colaborador</h1>
             <div class="name">
                 <div class="title">
                     <label>Nome</label>
-                    <input type="text" required>
+                    <input type="text" name="nome" required>
                 </div>
                 <div class="title">
-                    <label>Sobrenome</label>
-                    <input type="text"  required>
+                    <label>Matricula</label>
+                    <input type="number" name="matricula" required>
                 </div>
             </div>
             <div class="function">
                 <label>cargo</label>
-                <select value="cargo" id="meuSelect" required>
+                <input type="text" name="cargo" required>
+                {{-- <select value="cargo" id="meuSelect" required>
                     <script>
                         var select = document.getElementById("meuSelect");
                         var dados = ["Opção 1", "Opção 2", "Opção 3"];
@@ -36,17 +38,17 @@
                           select.appendChild(option);
                         }
                       </script>
-                </select>
+                </select> --}}
 
             </div>
             <div class="info">
                 <div class="title">
                     <label>Salário</label>
-                    <input type="number" required>
+                    <input type="number" name="salario" required>
                 </div>
                 <div class="title">
                     <label>Data da promoção</label>
-                    <input type="date" required input>
+                    <input type="date" name="data_promocao" required>
                 </div>
             </div>
             <div class="actions">

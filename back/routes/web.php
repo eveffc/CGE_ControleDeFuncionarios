@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\StorieController;
+use App\Models\Employee;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,18 +16,26 @@ use App\Http\Controllers\StorieController;
 |
 */
 
-
+//home
 Route::get('/', [EmployeeController::class, 'index']);
 
+//adicionar novo funcionário
 Route::get('/novo.funcionario', function () {
-    return view('new');
+    return view('newEmployee');
 });
+Route::post('/inserir.employee', [EmployeeController::class, 'inserirDados']);
+
+//editar funcionário
 Route::get('/editar.funcionario', function () {
     return view('EditEmployee');
 });
+
+//criar promoção
 Route::get('/promocao', function () {
     return view('Promotion');
 });
+Route::post('/inserir.promocao', [StorieController::class, 'inserirPromocao']);
+//histórico do funcionário
 Route::get('/funcionario', [StorieController::class, 'index']);
 
 
