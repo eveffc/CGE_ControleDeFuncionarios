@@ -18,25 +18,24 @@ use App\Models\Employee;
 
 //home
 Route::get('/', [EmployeeController::class, 'index']);
+Route::get('/employees/create', [EmployeeController::class, 'create']);
+Route::get('/employees/{id}', [EmployeeController::class, 'show']);
+Route::post('/employees', [EmployeeController::class, 'store']);
+Route::delete('employees/{id}', [EmployeeController::class, 'destroy']);
 
-//adicionar novo funcionário
+
+
+//Rotas de páginas
 Route::get('/novo.funcionario', function () {
-    return view('newEmployee');
+    return view('employees/create');
 });
-Route::post('/inserir.employee', [EmployeeController::class, 'create']);
-
-//editar funcionário
 Route::get('/editar.funcionario', function () {
     return view('EditEmployee');
 });
-
-//criar promoção
 Route::get('/promocao', function () {
     return view('Promotion');
 });
-Route::post('/inserir.promocao', [StorieController::class, 'inserirPromocao']);
-//histórico do funcionário
-Route::get('/funcionario', [StorieController::class, 'index']);
+
 
 
 

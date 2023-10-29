@@ -36,7 +36,6 @@ td{
     display: flex;
     flex-direction: row;
     background-color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
     margin: 5px;
     padding: 10px;
 }
@@ -46,9 +45,13 @@ td{
 .nome{
     font-weight: 600;
     margin: 5px 0px 2px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3b3a3a;
 }
 .cargo{
     margin: 2px 0px 5px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3b3a3a;
 }
 
 /*Botões de ação*/

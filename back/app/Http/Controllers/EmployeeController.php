@@ -16,7 +16,11 @@ class EmployeeController extends Controller
     //     return view('employees.create');
     // }
 
-    public function create(Request $request)
+    public function create() {
+        return view('novo.funcionario');
+    }
+
+    public function store(Request $request)
     {
     // Valide os dados do formulário, por exemplo:
     $validatedData = $request->validate([
@@ -35,6 +39,14 @@ class EmployeeController extends Controller
     $employee->data_promocao = $request->input('data_promocao');
     $employee->save();
 
-    return redirect('/');
+    return redirect('/')->with('msg', 'Funcionario adicionado com sucesso!');
+    }
+
+    public function destroy($id) {
+
+        Employee::findOrFail($id)->delete();
+
+        return redirect('/')->with('msg', 'Funcionário excluído!');
+
     }
     }
